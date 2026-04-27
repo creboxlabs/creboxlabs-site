@@ -13,7 +13,7 @@ export const SITE = {
   address: {
     line1: "Crebox Labs LLC",
     line2: "c/o Northwest Registered Agent, LLC",
-    line3: "30 N Gould St, Ste R",
+    line3: "30 N Gould St, Ste N",
     line4: "Sheridan, WY 82801",
     line5: "United States",
   },
