@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             site. The only personal information we receive is the content of
             email messages you choose to send to one of our published addresses
             (such as{" "}
-            <span className="font-mono">{SITE.email}</span>). This
+            <span className="font-mono">{SITE.emails.privacy}</span>). This
             typically includes your name, email address, and the message you
             wrote.
           </p>
@@ -108,10 +108,10 @@ export default function PrivacyPage() {
             you, ask us to correct inaccuracies, or ask us to delete it. To
             exercise any of these rights, write to{" "}
             <a
-              href={`mailto:${SITE.email}`}
+              href={`mailto:${SITE.emails.privacy}`}
               className="font-mono text-accent underline-offset-4 hover:underline"
             >
-              {SITE.email}
+              {SITE.emails.privacy}
             </a>
             .
           </p>
@@ -135,10 +135,10 @@ export default function PrivacyPage() {
           <p className="mt-4 leading-relaxed">
             For questions about this policy, write to{" "}
             <a
-              href={`mailto:${SITE.email}`}
+              href={`mailto:${SITE.emails.privacy}`}
               className="font-mono text-accent underline-offset-4 hover:underline"
             >
-              {SITE.email}
+              {SITE.emails.privacy}
             </a>
             .
           </p>

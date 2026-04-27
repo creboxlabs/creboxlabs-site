@@ -17,33 +17,44 @@ export default function ContactPage() {
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/90">
         <p>
-          For partnership inquiries, press, privacy or legal questions, please
-          email{" "}
+          For partnership inquiries, press, or general questions, please email{" "}
           <a
-            href={`mailto:${SITE.email}`}
+            href={`mailto:${SITE.emails.general}`}
             className="font-mono font-medium text-accent underline-offset-4 hover:underline"
           >
-            {SITE.email}
+            {SITE.emails.general}
           </a>
           . We aim to reply within five business days.
-        </p>
-        <p className="text-muted">
-          A postal mailing address is available on request.
         </p>
       </div>
 
       <div className="mt-16 rounded-2xl border border-border bg-surface p-8">
-        <div className="flex flex-col gap-2">
-          <span className="text-sm font-medium uppercase tracking-wider text-muted">
-            Email
-          </span>
-          <a
-            href={`mailto:${SITE.email}`}
-            className="font-mono text-lg text-foreground transition-colors hover:text-accent"
-          >
-            {SITE.email}
-          </a>
-        </div>
+        <span className="text-sm font-medium uppercase tracking-wider text-muted">
+          Email
+        </span>
+        <a
+          href={`mailto:${SITE.emails.general}`}
+          className="mt-2 block font-mono text-lg text-foreground transition-colors hover:text-accent"
+        >
+          {SITE.emails.general}
+        </a>
+      </div>
+
+      <div className="mt-6 rounded-2xl border border-border bg-surface p-8">
+        <span className="text-sm font-medium uppercase tracking-wider text-muted">
+          Mailing address
+        </span>
+        <address className="mt-3 ml-4 not-italic leading-relaxed text-foreground/90">
+          {SITE.address.line1}
+          <br />
+          {SITE.address.line2}
+          <br />
+          {SITE.address.line3}
+          <br />
+          {SITE.address.line4}
+          <br />
+          {SITE.address.line5}
+        </address>
       </div>
     </section>
   );

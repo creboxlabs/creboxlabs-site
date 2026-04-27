@@ -3,9 +3,20 @@ export const SITE = {
   legalName: "Crebox Labs LLC",
   tagline: "We build digital products for emerging markets.",
   description:
-    "A digital studio building software, AI tools, and consumer experiences for the MENA region and beyond.",
+    "A Wyoming-registered digital studio building software, AI tools, and consumer experiences for the MENA region and beyond.",
   url: "https://creboxlabs.com",
-  email: "hello@creboxlabs.com",
+  emails: {
+    general: "hello@creboxlabs.com",
+    privacy: "privacy@creboxlabs.com",
+    legal: "legal@creboxlabs.com",
+  },
+  address: {
+    line1: "Crebox Labs LLC",
+    line2: "c/o Northwest Registered Agent, LLC",
+    line3: "30 N Gould St, Ste R",
+    line4: "Sheridan, WY 82801",
+    line5: "United States",
+  },
   founded: "2026",
   lastUpdated: "2026-04-27",
 } as const;

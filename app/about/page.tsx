@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Crebox Labs is a digital studio building software, AI tools, and consumer experiences for emerging-market audiences.",
+    "Crebox Labs is a Wyoming-registered digital studio building software, AI tools, and consumer experiences for emerging-market audiences.",
   alternates: { canonical: "/about" },
 };
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/90">
           <p>
             Crebox Labs is a digital studio founded in 2026, registered as a
-            limited liability company in the United States.
+            limited liability company in Wyoming, United States.
           </p>
           <p>
             We build consumer-facing software with a focus on emerging-market

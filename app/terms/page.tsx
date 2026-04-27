@@ -133,10 +133,10 @@ export default function TermsPage() {
           <p className="mt-4 leading-relaxed">
             For questions about these Terms, write to{" "}
             <a
-              href={`mailto:${SITE.email}`}
+              href={`mailto:${SITE.emails.legal}`}
               className="font-mono text-accent underline-offset-4 hover:underline"
             >
-              {SITE.email}
+              {SITE.emails.legal}
             </a>
             .
           </p>

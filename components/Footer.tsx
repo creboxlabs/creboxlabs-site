@@ -26,10 +26,10 @@ export default function Footer() {
             ))}
           </ul>
           <a
-            href={`mailto:${SITE.email}`}
+            href={`mailto:${SITE.emails.general}`}
             className="font-mono text-sm text-muted transition-colors hover:text-accent"
           >
-            {SITE.email}
+            {SITE.emails.general}
           </a>
         </div>
       </div>
