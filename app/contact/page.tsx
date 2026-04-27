@@ -4,9 +4,27 @@ import { SITE } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Crebox Labs for partnership, press, or general inquiries.",
+    "Get in touch with Crebox Labs for partnership, press, privacy, or legal inquiries.",
   alternates: { canonical: "/contact" },
 };
+
+const channels = [
+  {
+    label: "General & partnerships",
+    description: "Inquiries, press, and everything else.",
+    email: SITE.emails.general,
+  },
+  {
+    label: "Privacy",
+    description: "Questions about our privacy practices or your data.",
+    email: SITE.emails.privacy,
+  },
+  {
+    label: "Legal",
+    description: "Terms, intellectual property, and legal correspondence.",
+    email: SITE.emails.legal,
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -17,27 +35,33 @@ export default function ContactPage() {
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/90">
         <p>
-          For partnership inquiries, press, or general questions, please email{" "}
-          <a
-            href={`mailto:${SITE.emails.general}`}
-            className="font-mono font-medium text-accent underline-offset-4 hover:underline"
-          >
-            {SITE.emails.general}
-          </a>
-          . We aim to reply within five business days.
+          Pick the channel that fits your message. We aim to reply within five
+          business days.
         </p>
       </div>
 
-      <div className="mt-16 rounded-2xl border border-border bg-surface p-8">
-        <span className="text-sm font-medium uppercase tracking-wider text-muted">
-          Email
-        </span>
-        <a
-          href={`mailto:${SITE.emails.general}`}
-          className="mt-2 block font-mono text-lg text-foreground transition-colors hover:text-accent"
-        >
-          {SITE.emails.general}
-        </a>
+      <div className="mt-12 rounded-2xl border border-border bg-surface">
+        <ul className="divide-y divide-border">
+          {channels.map((c) => (
+            <li
+              key={c.email}
+              className="flex flex-col gap-3 p-7 md:flex-row md:items-center md:justify-between md:gap-8"
+            >
+              <div className="flex flex-col gap-1">
+                <span className="text-sm font-medium uppercase tracking-wider text-muted">
+                  {c.label}
+                </span>
+                <span className="text-foreground/90">{c.description}</span>
+              </div>
+              <a
+                href={`mailto:${c.email}`}
+                className="font-mono text-base text-foreground transition-colors hover:text-accent md:text-right"
+              >
+                {c.email}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mt-6 rounded-2xl border border-border bg-surface p-8">
