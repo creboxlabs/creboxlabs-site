@@ -18,7 +18,7 @@ export const SITE = {
     line5: "United States",
   },
   founded: "2026",
-  lastUpdated: "2026-05-25",
+  lastUpdated: "2026-05-26",
 } as const;
 
 export const NAV_LINKS = [
